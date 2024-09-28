@@ -1,0 +1,456 @@
+<html>
+ <head>
+  <title>
+    Mechanical watch
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+<!-- OWL CAROUSEL -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+<!-- BOX ICONS -->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #000;
+            padding: 10px 20px;
+            height: 100px;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .navbar .logo span {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .navbar .menu {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .menu a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        .navbar .menu a.active {
+            border-bottom: 2px solid #fff;
+        }
+        .navbar .menu .search-cart {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .menu .search-cart i {
+            color: #fff;
+            font-size: 18px;
+            margin-left: 15px;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .hero img {
+            width: 100%;
+            height: auto;
+        }
+        .hero .text {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .hero .text h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        .hero .text button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .hero .arrow-left, .hero .arrow-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .hero .arrow-left {
+            left: 10px;
+        }
+        .hero .arrow-right {
+            right: 10px;
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-balck fixed-top" >
+    <div class="container">
+        <a class="navbar-brand sticky-top" href="#">Mechanical watch  </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <!-- <a class="nav-link" href="#">Корзина <span class="badge badge-pill badge-danger">{{ cart.products.count }}</span></a> -->
+            <div class="menu">
+                <a class="active" href="#">
+                 Home
+                </a>
+                <a href="">
+                 Plain Watches
+                </a>
+                <a href="#">
+                 Diamond Watches
+                </a>
+                <a href="#">
+                 Jewellery
+                </a>
+                <a href="#">
+                 Women Jewellery
+                </a>
+                <a href="#">
+                 Our Services
+                </a>
+                <div class="search-cart">
+                 <i class="fas fa-search">
+                 </i>
+                 <!-- <i class="fas fa-shopping-cart"> -->
+            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Корзина <span class="badge badge-pill badge-danger">{{ cart.products.count }}</span></a>
+
+                 <!-- </i> -->
+                </div>
+               </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div class="navbar">
+   <div class="logo">
+
+    <span>
+        Mechanical watch
+    </span>
+   </div>
+   <div class="menu">
+    <a class="active" href="#">
+     Home
+    </a>
+    <a href="">
+     Plain Watches
+    </a>
+    <a href="#">
+     Diamond Watches
+    </a>
+    <a href="#">
+     Jewellery
+    </a>
+    <a href="#">
+     Women Jewellery
+    </a>
+    <a href="#">
+     Our Services
+    </a>
+    <div class="search-cart">
+     <i class="fas fa-search">
+     </i>
+     <i class="fas fa-shopping-cart">
+     </i>
+    </div>
+   </div>
+  </div> -->
+
+{% block content %}
+
+  <style>
+   .section {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            width: 380px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-image {
+            width: 340px;
+            height: 300px;
+        }
+        .product-details {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .product-price {
+            font-size: 14px;
+            color: #666666;
+            margin: 10px 0;
+        }
+        .add-to-cart {
+            display: block;
+            width: 330px;
+            padding: 10px;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+  </style>
+
+ 
+<section class="section">
+  <div class="product-card">
+   <!-- <img alt="" class="product-image" height="300" src="/media/DiamondRolexDatejust41RomandialinDubaiUAE_720x.webp" width="300"/> -->
+   <!-- <img class="product-image" src="/media/DiamondRolexDatejust41RomandialinDubaiUAE_720x.webp" alt=""> -->
+   <img class="product-image" src="https://img.valueyourwatch.com/wp-content/uploads/2024/05/30121102/s-l1600-353-300x300.jpg?strip=all&lossy=1&sharp=1&ssl=1" alt="">
+   <!-- <img alt="Diamond Rolex Datejust Oyster 41mm - Stainless Steel - Roman Dial" class="product-image" height="400" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-qRjrnuxRDdoi0NxM4J1XXI4x.png?st=2024-09-27T14%3A51%3A35Z&amp;se=2024-09-27T16%3A51%3A35Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-27T00%3A12%3A46Z&amp;ske=2024-09-28T00%3A12%3A46Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=wPx8XcRYU4bhX83XZv6jK4e3PD56Pk/FxduHhQthxT4%3D" width="400"/> -->
+   <div class="product-details">
+    <div class="product-title">
+     Diamond Rolex Datejust Oyster 41mm - Stainless Steel - Roman Dial
+    </div>
+    <div class="product-price">
+     Dhs. 84,500.00
+    </div>
+    <a class="add-to-cart" href="#">
+     ADD TO CART
+    </a>
+   </div>
+  </div>
+</section>
+{% endblock content %}
+
+<style>
+ .footer {
+          background-color: #000;
+          color: #fff;
+          font-family: 'Arial', sans-serif;
+          margin: 0;
+          padding: 0;
+      }
+      .footer {
+          display: flex;
+          justify-content: space-around;
+          padding: 40px 20px;
+      }
+      .footer div {
+          max-width: 300px;
+      }
+      .footer h3 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 20px;
+      }
+      .footer p, .footer a {
+          font-size: 14px;
+          line-height: 1.6;
+          color: #fff;
+          text-decoration: none;
+      }
+      .footer a:hover {
+          text-decoration: underline;
+      }
+      .footer .social-icons {
+          display: flex;
+          gap: 10px;
+          margin-top: 20px;
+      }
+      .footer .social-icons i {
+          font-size: 24px;
+      }
+      .footer .payment-icons {
+          display: flex;
+          gap: 10px;
+          margin-top: 20px;
+      }
+      .footer .payment-icons img {
+          width: 40px;
+      }
+      .footer .copyright {
+          text-align: center;
+          margin-top: 20px;
+          font-size: 14px;
+          color: white;
+      }
+</style>
+<!-- </head>
+<body> -->
+<div class="footer">
+ <div class="information">
+  <h3>
+   Information
+  </h3>
+  <p>
+   Address: Opal Tower | Business Bay, Dubai, UAE
+  </p>
+  <p>
+   Email: globalicecontact@gmail.com
+  </p>
+  <p>
+   WhatsApp: Click
+   <a href="#">
+    here
+   </a>
+  </p>
+  <p>
+   We are not an official dealer for the products we sell and have no affiliation with the manufacturer. All brand names and trademarks are the property of their respective owners and are used for identification purposes only.
+  </p>
+  <div class="social-icons">
+   <i class="fab fa-youtube">
+   </i>
+   <i class="fab fa-instagram">
+   </i>
+  </div> <hr style="color: white;">
+  <div class="copyright">
+    © 2024 Mechanical watch. from <a href="https://uo4292.craftum.io/">nisme.group</a>
+   </div>
+ </div>
+ <div class="about-us">
+  <h3>
+   About us
+  </h3>
+  <p>
+   <a href="#">
+    Learn about Global Ice
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Diamond Set watches
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Jewellery
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Luxury Watches
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Contact Us
+   </a>
+  </p>
+ </div>
+ <div class="policies">
+  <h3>
+   Policies
+  </h3>
+  <p>
+   <a href="#">
+    Privacy Policy
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Shipping Policy
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Returns &amp; Refund Policy
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Terms of Service
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Warranty
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Billing Information
+   </a>
+  </p>
+  <p>
+   <a href="#">
+    Terms of Sale
+   </a>
+  </p>
+
+
+  <!-- <style>
+    #n-2b59c665-cb64-4ee1-8679-aeabf481bded {
+    transform: rotate(352deg);
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px
+}
+
+#n-85497f19-02e3-43f0-8f99-2627bee8c77b {
+    background-image: var(--bg-1920,var(--background-image))
+}
+
+@media screen and (max-width: 1199px) {
+    #n-a5c2520c-f79e-4423-8ce1-d80881bbfbe7 {
+        min-height:0px
+    }}
+
+    .cli-button--primary {
+    --normal-background-color: var(--primary-color);
+    --normal-color: var(--white);
+    --normal-border: 1px solid var(--primary-color);
+    --normal-box-shadow: none;
+    --hover-box-shadow: none
+}
+.cli-block__header-content .cli-header__button {
+    width: 100%;
+}
+  </style> -->
+ </div>
+ 
+</div>
+<!-- <a id="n-2b59c665-cb64-4ee1-8679-aeabf481bded" data-root-id="3608192a-6117-41c0-a63e-d647a064957d" href="https://t.me/nisme_code" class="cli-button cli-button--middle cli-button--primary cli-header__button" data-type="button" data-title="Кнопка" data-draggable="true" data-design-type="button" data-design-order="6" data-content-order="5"><span id="n-cf2ccfcb-9597-44fd-8df3-296dd73d763b" data-root-id="3608192a-6117-41c0-a63e-d647a064957d" class="" data-type="text" data-design-type="text">Codes</span></a> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+
+<script src="/premyerasecapp/static/app.js"></script>
+ </body>
+</html>
